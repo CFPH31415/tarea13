@@ -1,0 +1,17 @@
+<label for="">Ingrese el texto a convertir a Mayúsculas</label>
+<input [(ngModel)]="texto" type="text">
+<p>{{texto | uppercase}}</p>
+
+<input [(ngModel)]="valor" type="number">
+    <select [(ngModel)]="moneda">
+      <option value="USD">Dólares</option>
+      <option value="EUR">Euros</option>
+    </select>
+    <p>{{valor | currency: moneda}}</p>
+
+    <div>
+      <h1 class="text-center font-bold text-lg pb-5 ">JSON PIPES</h1>
+      <ul *ngFor="let numero of myobjeto">
+          <pre>{{ numero | json }}</pre>
+      </ul>
+  </div>
